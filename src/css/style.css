@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+/* layout a due colonne */
+.colonna {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Stile del footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/*mio*/
+.containerTab {
+  position: relative;
+  width:50%;
+  float:left;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0,0,0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.containerTab:hover .overlay {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .colonna {
+    width: 100%;
+  }
+}
+
+/*per HEADER*/
+
+/* posiziona il testo al centro dell'immagine */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*per TABELLA*/
+
+.contenitore {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  margin: 30px;
+  width: 600px;
+  
+  padding: 16px;
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #5B352A;
+  color: white;
+}
+
+/* Stile del submit button */
+.btn {
+  background-color: #5B352A;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 15%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
